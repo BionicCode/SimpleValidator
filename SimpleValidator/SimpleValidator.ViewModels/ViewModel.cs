@@ -27,12 +27,9 @@ namespace SimpleValidator.ViewModels
             set
             {
                 // Validate the value
-                if (ValidateProperty(value))
-                {
-                    // Accept the valid value
-                    this._timeRecordInterval = value;
-                    OnPropertyChanged();
-                }
+                ValidateProperty(value);
+                this._timeRecordInterval = value;
+                OnPropertyChanged();
             }
         }
 
